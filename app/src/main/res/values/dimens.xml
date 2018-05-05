@@ -2,4 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="activity_hotizontal_mangin">13dp</dimen>
+    <dimen name="activity_vertical_mangin">16dp</dimen>
+    <dimen name="height_elevation">4dp</dimen>
+    <dimen name="height_view_pager">200dp</dimen>
+    <dimen name="height_recycler_categorias">50dp</dimen>
+    <dimen name="margin_item_categoria">10dp</dimen>
 </resources>

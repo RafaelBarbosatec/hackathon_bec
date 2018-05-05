@@ -22,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
             override fun onFinish() {
 
-                startActivity(Intent(this@SplashActivity,HomeActivity::class.java))
+                startActivity(Intent(this@SplashActivity,TipoUsuarioActivity::class.java))
             }
 
         }.start()

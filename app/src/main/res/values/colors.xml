@@ -3,5 +3,7 @@
     <color name="colorPrimary">#9E9E9E</color>
     <color name="colorPrimaryDark">#616161</color>
     <color name="colorAccent">#FF5252</color>
+    <color name="colorCardSelected">#e9e9e9</color>
+    <color name="colorCardnotSelected">#FFF</color>
     <!--<color name="control_highlight">#FFD423</color>-->
 </resources>
