@@ -8,9 +8,13 @@ import kotlinx.android.synthetic.main.activity_detalhe_pregao.*
 
 class DetalhePregaoActivity : AppCompatActivity() {
 
+    private var tipoUsuario: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhe_pregao)
+
+        tipoUsuario = SheredUtil.getTipoUsuari(this)
 
         initViews()
     }
@@ -23,6 +27,10 @@ class DetalhePregaoActivity : AppCompatActivity() {
 
         button_participar.setOnClickListener {
             startActivity(Intent(this@DetalhePregaoActivity,PregaoActivity::class.java))
+        }
+
+        if (tipoUsuario ==  SheredUtil.TIPO_VISITANTE){
+            button_participar.text = "INDIQUE A UMA EMPRESA"
         }
 
     }

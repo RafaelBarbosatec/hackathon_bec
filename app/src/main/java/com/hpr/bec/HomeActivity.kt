@@ -42,6 +42,7 @@ class HomeActivity : AppCompatActivity() {
 
     private var adapter_categorias:CategoriasAdapter? = null
     private var adapter_pregoes:PregaoAdapter? = null
+    private var tipoUsuario: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +50,7 @@ class HomeActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+        tipoUsuario = SheredUtil.getTipoUsuari(this)
         initCategorias()
         initPregoes()
         initViews()
@@ -59,6 +61,11 @@ class HomeActivity : AppCompatActivity() {
     private fun initViews() {
 
         scroll_main.alpha = 0f
+
+        if (tipoUsuario == SheredUtil.TIPO_VISITANTE){
+            textview_desc_cat.text = "Recentes"
+        }
+
 
     }
 
