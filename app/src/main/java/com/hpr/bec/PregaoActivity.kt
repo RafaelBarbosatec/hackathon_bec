@@ -34,7 +34,7 @@ class PregaoActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar_pregao)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = ""
+        supportActionBar?.title = "CALDO BILE"
 
 
     }
