@@ -33,6 +33,9 @@ class PregaoAdapter(var mlista: List<Pregao>,
 //
 //        holder?.itemView?.tv_nome?.text = categoria.nome
 
+        holder.itemView?.textview_nome?.text = mlista[position].DescItem
+        holder.itemView?.textview_desc?.text = "Quantidade: ${mlista[position].QtdOC}"
+
         holder.itemView?.ll_item?.setOnClickListener {
             listern?.clickPregao()
         }
@@ -42,13 +45,18 @@ class PregaoAdapter(var mlista: List<Pregao>,
         listern = l
     }
 
-    fun replaceData(books:List<Pregao>){
+    fun replaceData(list:List<Pregao>?){
 
-        mlista = books
-        notifyDataSetChanged()
+        if (list!=null) {
+            mlista = list
+            notifyDataSetChanged()
+        }
 
     }
 
+    fun getItem(position: Int):Pregao{
+        return mlista[position]
+    }
     override fun getItemCount(): Int {
         return mlista.size
     }

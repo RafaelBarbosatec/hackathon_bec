@@ -27,6 +27,7 @@ class TipoUsuarioActivity : AppCompatActivity() {
 
         button_avancar.setOnClickListener {
             startActivity(Intent(this@TipoUsuarioActivity,HomeActivity::class.java))
+            finish()
         }
     }
 
