@@ -24,57 +24,13 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="4dp"
-       >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recyclerview_step">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+    </android.support.v4.view.ViewPager>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:text="Valor de sua Proposta"/>
-
-           <LinearLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_gravity="center_horizontal"
-               android:orientation="horizontal">
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:textSize="16sp"
-                   android:text="R$"/>
-
-               <EditText
-                   android:layout_width="150dp"
-                   android:layout_height="wrap_content"
-                   />
-
-           </LinearLayout>
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="ENVIAR"
-                android:layout_margin="10dp"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/bg_retangle_red"/>
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
