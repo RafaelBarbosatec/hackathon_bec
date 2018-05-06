@@ -123,7 +123,7 @@ class HomeActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<List<Pregao>>?, response: Response<List<Pregao>>?) {
 
                         if (response != null && response.isSuccessful){
-                            adapter_pregoes?.replaceData(response.body()?.subList(0,20))
+                            adapter_pregoes?.replaceData(response.body()?.subList(0,25))
 
                             textview_total.text = response.body()?.size.toString()
 
