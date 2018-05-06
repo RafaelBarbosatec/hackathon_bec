@@ -26,6 +26,17 @@ class DetalhePregaoActivity : AppCompatActivity() {
         supportActionBar?.title = ""
 
         button_participar.setOnClickListener {
+
+            if (tipoUsuario ==  SheredUtil.TIPO_VISITANTE){
+
+                val shareBody = "Here is the share content body"
+                val sharingIntent = Intent(android.content.Intent.ACTION_SEND)
+                sharingIntent.type = "text/plain"
+                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here")
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
+                startActivity(Intent.createChooser(sharingIntent, resources.getString(R.string.app_name)))
+
+            }else
             startActivity(Intent(this@DetalhePregaoActivity,PregaoActivity::class.java))
         }
 

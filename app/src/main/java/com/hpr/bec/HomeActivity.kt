@@ -72,6 +72,13 @@ class HomeActivity : AppCompatActivity() {
             textview_desc_cat.text = "Recentes"
         }
 
+        img_perfil.setOnClickListener {
+            var intent = Intent(this, TipoUsuarioActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent)
+            finish()
+        }
+
 
     }
 

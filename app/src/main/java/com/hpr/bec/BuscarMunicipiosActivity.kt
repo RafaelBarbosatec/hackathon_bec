@@ -18,6 +18,7 @@ class BuscarMunicipiosActivity : AppCompatActivity() {
 
         button_avancar.setOnClickListener {
             startActivity(Intent(this@BuscarMunicipiosActivity,HomeActivity::class.java))
+            finish()
         }
 
     }
