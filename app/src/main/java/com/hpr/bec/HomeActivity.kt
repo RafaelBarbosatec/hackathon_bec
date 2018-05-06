@@ -1,8 +1,12 @@
 package com.hpr.bec
 
+import android.app.PendingIntent
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.NotificationCompat
+import android.support.v4.app.NotificationManagerCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
@@ -56,6 +60,8 @@ class HomeActivity : AppCompatActivity() {
         initViews()
 
         loadconvites()
+
+        startTime()
     }
 
     private fun initViews() {
@@ -147,6 +153,41 @@ class HomeActivity : AppCompatActivity() {
                     }
 
                 })
+    }
+
+
+    fun showNotification() {
+        var intent = Intent(this@HomeActivity, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK;
+        var pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+
+
+        var mBuilder = NotificationCompat.Builder(this, "1")
+                .setSmallIcon(R.drawable.notification_icon_background)
+                .setContentTitle("Licitações disponíveis")
+                .setContentText("Você tem 4 licitações disponíveis para lançar um pregão.Clique aqui para ser redirecinado.")
+                .setStyle(NotificationCompat.BigTextStyle()
+                        .bigText("Você tem 4 licitações disponíveis para lançar um pregão.Clique aqui para ser redirecinado."))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent)
+
+        val nmc = NotificationManagerCompat.from(this)
+        nmc.notify(1, mBuilder.build())
+
+    }
+
+    fun startTime() {
+
+        var time = object : CountDownTimer(10000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+            }
+
+            override fun onFinish() {
+                showNotification()
+            }
+
+        }.start()
     }
 
 }

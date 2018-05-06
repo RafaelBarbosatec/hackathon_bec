@@ -15,6 +15,7 @@ import android.view.MotionEvent
 import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper
 import com.hpr.bec.adapters.ViewPagerMainAdapter
 import com.hpr.bec.fragments.BlankFragment
+import com.hpr.bec.fragments.BlankFragment2
 
 
 class PregaoActivity : AppCompatActivity() {
@@ -91,13 +92,13 @@ class PregaoActivity : AppCompatActivity() {
         val adapter_frag = ViewPagerMainAdapter(supportFragmentManager)
 
         adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
-        adapter_frag.addFragment(BlankFragment(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
+        adapter_frag.addFragment(BlankFragment2(), "")
 
         view_pager_step.adapter = adapter_frag
 
@@ -110,4 +111,5 @@ class PregaoActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }
